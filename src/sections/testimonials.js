@@ -12,23 +12,27 @@ const data = [
   {
     id: 1,
     avatar: author,
-    authorName: 'Melina Pettendorfer',
-    designation: 'CEO of Uber',
-    text: `Best host I've had in 10 years. Smooth migration, no stress, and friendly support one click away. I'm very happy and recommend their services`,
+    authorName: 'Anonymous',
+    designation: 'Our Very First Customer',
+    text: `"There is nothing better than a friend unless it's a friend with chocolate."`,
   },
   {
     id: 2,
     avatar: author,
-    authorName: 'Melina Pettendorfer',
-    designation: 'CEO of Google',
-    text: `Best host I've had in 10 years. Smooth migration, no stress, and friendly support one click away. I'm very happy and recommend their services`,
+    authorName: 'Drake',
+    designation: 'Father',
+    text: `"It was my daughter's birthday just yesterday. She was sad and unhappy for some reason 
+    or the other. Then I decided to gift her your custom imported chocolate from Belgium.
+    It really made her day and just looking at her made me happy too"`,
   },
   {
     id: 3,
     avatar: author,
-    authorName: 'Melina Pettendorfer',
-    designation: 'CEO of Microsoft',
-    text: `Best host I've had in 10 years. Smooth migration, no stress, and friendly support one click away. I'm very happy and recommend their services`,
+    authorName: '',
+    designation: 'Traveler',
+    text: `"I always buy a box for my wife, who adores the chocolates, when I visit the Ft. Wayne 
+    Airport. I decided to surprise her with a DeBrand chocolate box because I hadn't been there in
+     a while. She felt the same way she did 10 years ago loved it."`,
   },
 ];
 
