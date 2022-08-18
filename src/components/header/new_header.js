@@ -94,7 +94,7 @@ const styles = {
     py: 4,
     transition: 'all 0.3s ease-in-out 0s',
     '&.is-sticky': {
-      backgroundColor: '#563a3a',
+      backgroundColor: '#c0934b',
       boxShadow: '0 6px 13px rgba(38,78,118,0.1)',
       paddingTop: '15px',
       paddingBottom: '15px',

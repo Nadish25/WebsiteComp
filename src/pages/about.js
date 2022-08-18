@@ -19,6 +19,7 @@ export default function IndexPage() {
 
 
         <Description />
+        
     <Footer></Footer>
     </ThemeProvider>
   );

@@ -6,6 +6,9 @@ import BgShape from 'assets/images/shape-1.svg';
 import shapeTop from 'assets/images/icons/shape-top.png';
 import shapeBottom from 'assets/images/icons/shape-bottom.png';
 
+const handleClick=()=>{
+  window.location.href = "mailto:vedantsinghal07@gmail.com";
+}
 const CallToAction = () => {
   return (
     <section sx={styles.section}>
@@ -15,7 +18,7 @@ const CallToAction = () => {
             Have any questions? Feel free to contact us
           </Heading>
           <Box sx={styles.btnWrapper}>
-            <Button variant="text">Contact us straight away!</Button>
+            <Button variant="text" onClick={handleClick}>Contact us straight away!</Button>
           </Box>
         </Box>
       </Container>
