@@ -3,33 +3,30 @@ import { jsx, Box, Container } from 'theme-ui';
 import SectionHeading from 'components/section-heading';
 import Accordion from 'components/accordion/accordion';
 import Image from 'components/image';
-import ipad from 'assets/images/ipad.png';
+import iphone from 'assets/images/iphone.png';
 
 const data = [
   {
-    title: 'Organize your project content',
+    title: 'Delivery Outreach',
     contents: (
       <div>
-        Get your blood tests delivered at let collect sample from the victory of
-        the managements that supplies best design system guidelines ever.
+        Get your homemade chocolates delievered right at your door step. Currently supporting: India, United States, United Kingdom and European Union.
       </div>
     ),
   },
   {
-    title: 'Collaborate your documents easily',
+    title: 'Crafted for every occasion',
     contents: (
       <div>
-        Get your blood tests delivered at let collect sample from the victory of
-        the managements that supplies best design system guidelines ever.
+        Is it a birthday? An anniversary ? No matter what, a celebration should have sweets: Nothing better than chocolates.
       </div>
     ),
   },
   {
-    title: `Build your team's knowledge base`,
+    title: `Personalisation`,
     contents: (
       <div>
-        Get your blood tests delivered at let collect sample from the victory of
-        the managements that supplies best design system guidelines ever.
+        You want a single bar? A collection of several... half n half. We have got you covered. You can choose your flavours, ingredients, fruits and nuts.
       </div>
     ),
   },
@@ -40,15 +37,15 @@ const PremiumFeature = () => {
     <Box as="section" sx={styles.section}>
       <Box
         as="figure"
-        sx={{ ...styles.illustration, background: `url(${ipad}) no-repeat` }}
+        sx={{ ...styles.illustration, background: `url(${iphone}) no-repeat` }}
       />
       <Container sx={styles.container}>
         <Box sx={styles.accordionGroup}>
           <SectionHeading
             sx={styles.heading}
-            slogan="Website content builder"
-            title="Meet our premium features that will make you wow"
-            description="Build an incredible workplace and grow your business with Gusto’s all-in-one platform with amazing contents."
+            slogan="Worth Remembering"
+            title="Send a gift crafted with love and worth remembering"
+            description="A chocolate is your best friend! Share this joy with handmade chocolates."
           />
           <Accordion items={data} />
         </Box>
@@ -73,7 +70,7 @@ const styles = {
     justifyContent: 'flex-end',
   },
   illustration: {
-    backgroundSize: [null, null, null, null, null, '62%', '50%', '66%', '62%'],
+    backgroundSize: [null, null, null, null, null, '62%', '50%', '60%', '60%'],
     '@media only screen and (min-width: 1601px)': {
       backgroundSize: '60%',
       backgroundPosition: '0 0',

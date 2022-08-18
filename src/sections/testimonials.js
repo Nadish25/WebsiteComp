@@ -5,33 +5,26 @@ import dynamic from 'next/dynamic';
 const Testimonial = dynamic(() => import('components/cards/testimonial'), {
   ssr: false,
 });
-import author from 'assets/images/testimonial.png';
+
+import test2 from 'assets/images/test2.png';
+import test3 from 'assets/images/test3.png';
 import { rgba } from 'polished';
 
 const data = [
   {
     id: 1,
-    avatar: author,
-    authorName: 'Anonymous',
-    designation: 'Our Very First Customer',
-    text: `"There is nothing better than a friend unless it's a friend with chocolate."`,
-  },
-  {
-    id: 2,
-    avatar: author,
-    authorName: 'Drake',
-    designation: 'Father',
-    text: `"It was my daughter's birthday just yesterday. She was sad and unhappy for some reason 
-    or the other. Then I decided to gift her your custom imported chocolate from Belgium.
+    avatar: test2,
+    authorName: 'Jemica',
+    designation: 'Mother',
+    text: `"It was my daughter's birthday just yesterday. I decided to gift her your custom imported chocolate from Belgium.
     It really made her day and just looking at her made me happy too"`,
   },
   {
-    id: 3,
-    avatar: author,
-    authorName: '',
+    id: 2,
+    avatar: test3,
+    authorName: 'Richard',
     designation: 'Traveler',
-    text: `"I always buy a box for my wife, who adores the chocolates, when I visit the Ft. Wayne 
-    Airport. I decided to surprise her with a DeBrand chocolate box because I hadn't been there in
+    text: `"I always buy a box for my wife, who adores the chocolates.I decided to surprise her with a Cacao chocolate box because I hadn't been there in
      a while. She felt the same way she did 10 years ago loved it."`,
   },
 ];
@@ -45,6 +38,7 @@ const Testimonials = () => {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
+
   };
   return (
     <Box as="section" id="testimonials" sx={styles.section}>

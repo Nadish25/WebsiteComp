@@ -15,9 +15,9 @@ const data = [
   },
 ];
 
-const TopBar = () => {
+const TopBar = (isMobile) => {
   return (
-    <Box as="section" sx={styles.topbar}>
+    <Box as="section" sx={styles.topbar} className={`topbar${isMobile ? ' is-mobile' : ''}`}>
       <Box sx={styles.content}>
         <Text as="span" className="caption">
           <GiftBox />New product launch sale begin, just grave the hot pricing
@@ -44,7 +44,13 @@ const styles = {
     backgroundColor: '#080111',
     px: [6, null, null, null, 0],
     py: ['12px'],
+    
+   ' @media screen and (max-width: 600px)': {
+      
+        display:'none'
+    }
   },
+ 
   content: {
     display: ['flex'],
     alignItems: ['center'],
@@ -60,6 +66,7 @@ const styles = {
         ml: [4],
       },
     },
+
     '.caption': {
       display: 'inline-flex',
       alignItems: 'center',

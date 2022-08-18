@@ -1,10 +1,10 @@
 /** @jsx jsx */
-import { jsx, Box, Flex, Container, Button } from 'theme-ui';
+import { jsx, Box, Flex, Container, Button,Image } from 'theme-ui';
 import { Fragment, useState } from 'react';
 import Sticky from 'react-stickynode';
 import Logo from 'components/logo';
 import TopBar from 'components/topbar';
-import LockIcon from 'components/icons/lock';
+import shop from 'assets/images/icons/bag.png';
 import HamburgerMenu from 'components/hamburger';
 import Navbar from './navbar';
 import { useRouter } from 'next/router'
@@ -19,10 +19,14 @@ export default function Header() {
     status.status === Sticky.STATUS_FIXED
       ? setState({ ...state, isSticky: true })
       : setState({ ...state, isSticky: false });
+      console.log(state.isMobileMenu)
   };
   const handleClick = (e) => {
     e.preventDefault()
     router.push("/about")
+  }
+  const handleClick2 = () => {
+    window.open("https://vedantsinghal07.mfs.gg/oGFht3u");
   }
   const toggleMobileMenu = () => {
     setState((prev) => {
@@ -42,7 +46,7 @@ export default function Header() {
 
   return (
     <Fragment>
-      <TopBar />
+      <TopBar isMobile={state.isMobileMenu}/>
       <Sticky
         enabled={true}
         top={0}
@@ -64,14 +68,15 @@ export default function Header() {
             />
             <Flex sx={styles.buttonGroup}>
               <Button
+               onClick={handleClick2}
                 variant="text"
                 sx={{
                   ...styles.login,
                   color: state.isSticky ? 'text' : 'white',
                 }}
               >
-                <LockIcon fill={state.isSticky ? '#343D48' : 'white'} />
-                Login
+                <Image src={shop} sx={styles.cartIcon}/>
+                Buy
               </Button>
               <Button
               onClick={handleClick}
@@ -107,7 +112,7 @@ const styles = {
     py: 4,
     transition: 'all 0.3s ease-in-out 0s',
     '&.is-sticky': {
-      backgroundColor: '#c1934a',
+      backgroundColor: '#c0934b',
       boxShadow: '0 6px 13px rgba(38,78,118,0.1)',
       paddingTop: '15px',
       paddingBottom: '15px',
@@ -115,6 +120,9 @@ const styles = {
     '&.is-mobile-menu': {
       backgroundColor: 'white',
     },
+  },
+  cartIcon:{
+    width: "2rem",
   },
   container: {
     display: 'flex',
@@ -141,7 +149,7 @@ const styles = {
     },
   },
   joinCommunity: {
-    backgroundColor: 'black',
+    backgroundColor: 'white',
     minHeight: [30, null, null, 40],
     p: ['0 12px', null, null, '0 14px'],
     fontSize: ['10px', null, null, 1],

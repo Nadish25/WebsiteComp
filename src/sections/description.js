@@ -20,7 +20,7 @@ export default function Description() {
 <Text sx={styles.para}>The Finest Chocolate in the World- India’s best kept secret! CACAO’ was founded in 2021 in Gurugram, the capital of Harayana, India. Over the years, CACAO’ has grown from Gurugram’s best kept secret to an international phenomenon. Demand has overflowed as people from all over the world have fallen in love with our uniquely fresh chocolates. First came the other cities of India, then multiple stores popped up across Asia. In July 2022, 
 ROYCE’ opened the doors to its first store in USA.
 
-In July 2022, Burgundy brought this innovative Indian confectionery brand to USA, with the opening of the first CACAO’ store in Central New York. CACAO’ is now available in Las Vegas, New Delhi, New York, London, Singapore and Sydney.</Text>
+In July 2022, Burgundy brought this innovative Indian confectionery brand to USA, with the opening of the first CACAO’ store in Central New York. CACAO’ is now available in Las Vegas, New Delhi, New York, London and Zurich.</Text>
 
         <Box as="figure" sx={styles.thumbWrapper}>
           

@@ -14,10 +14,9 @@ import {
 import { useState } from 'react';
 import { rgba } from 'polished';
 import Image from 'components/image';
-import Swal from 'sweetalert2'
+
 import SideImage from 'assets/images/beans.png';
 import ReactStars from 'react-stars'
-
 const tlds = [
   {
     label: '.com',
@@ -32,54 +31,73 @@ const tlds = [
     value: '.org',
   },
 ];
+var new_rating = 5;
+const ratingChanged = (newRating) => {
+ 
+  new_rating= newRating
+
+
+}
 const Banner = () => {
-const FORMSPARK_ACTION_URL = "https://submit-form.com/IjEPvrGq";
-const [message, setMessage] = useState();
-const onSubmit = async (e) => {
-  e.preventDefault();
-  await fetch(FORMSPARK_ACTION_URL, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      Accept: "application/json",
-    },
-    body: JSON.stringify({
-      message,
-    }),
+  const [state, setState] = useState({
+    domainName: '',
+    tld: '',
   });
-  Swal.fire(
-    'Thanks',
-    'Your Feedback Is Appreciated',
-    'success'
-  )
-};
+
+
+
+  const handleChange = (e) => {
+    setState({
+      ...state,
+      [e.target.id]: e.target.value,
+    });
+  };
 
   return (
     <Box as="section" id="home" sx={styles.section}>
       <Container>
-        
         <Box sx={styles.grid}>
-        <Heading sx={styles.none}>"Never to
- </Heading>
           <Box sx={styles.domainCard}>
-          <Heading >"Never too much
+            <Heading>"Never too much
  chocolate!"</Heading>
-<form onSubmit={onSubmit} sx={styles.inputGroup}>
 
- <ReactStars
-  count={5}
-  value={message}
-  onChange={(e) => setMessage(e)}
-  size={48}
-  color2={'#ffd700'} />
- <Button type="submit" variant="primary" sx={styles.submit}>
+<>
+<form action="https://submit-form.com/IjEPvrGq">
+  <div>How do you rate us?</div>
+  <div>
+    <input type="radio" id="1" name="rating" value="1" required="" />
+    <label for="1">⭐</label>
+  </div>
+  <div>
+    <input type="radio" id="2" name="rating" value="2" required="" />
+    <label for="2">⭐⭐</label>
+  </div>
+  <div>
+    <input type="radio" id="3" name="rating" value="3" required="" />
+    <label for="3">⭐⭐⭐</label>
+  </div>
+  <div>
+    <input type="radio" id="4" name="rating" value="4" required="" />
+    <label for="4">⭐⭐⭐⭐</label>
+  </div>
+  <div>
+    <input type="radio" id="5" name="rating" value="5" required="" />
+    <label for="5">⭐⭐⭐⭐⭐</label>
+  </div>
+  <Button type="submit" variant="primary" sx={styles.submit}>
               Submit
             </Button>
             <Text as="p" sx={styles.note}>
               Thank you for your feedback
             </Text>
-  
 </form>
+
+ 
+
+  </>
+          </Box>
+          <Box as="figure" sx={styles.illustration}>
+            <Image src={SideImage} loading="lazy" alt="cocoa bean" sx={{width:"100%", height:"100%"}}/>
           </Box>
         </Box>
       </Container>
@@ -91,20 +109,13 @@ export default Banner;
 
 const styles = {
   section: {
-    backgroundImage: 'url("https://media.discordapp.net/attachments/673481456105947146/1008768055008047164/banner.png?width=485&height=677")',
-    backgroundRepeat: 'no-repeat',
-    backgroundSize: 'cover',
-    height: '100%',
+    backgroundColor: '#c1934a',
     pt: [17, null, null, 20, null],
     pb: [6, null, null, 12, 16],
   },
-  none:{
-    opacity: 0,
- 
-  },
   grid: {
     gap: ['30px 60px', null, null, null, '30px 40px', '30px 60px'],
-    display: 'flex',
+    display: 'grid',
     minHeight: [null, null, null, null, null, '66vh', '81vh'],
     alignItems: 'center',
     gridTemplateColumns: [
@@ -112,17 +123,16 @@ const styles = {
       null,
       null,
       null,
-      'repeat(1, 1fr)',
+      'repeat(2, 1fr)',
       '510px 1fr',
     ],
   },
   domainCard: {
     background: 'white',
-
     boxShadow: '0px 24px 50px rgba(54, 91, 125, 0.05)',
     borderRadius: 10,
-    p: ['30px 25px 50px', null, null, '40px 55px 40px'],
-    m: ['20px', null, null, '0 auto', '100px'],
+    p: ['30px 25px 50px', null, null, '40px 40px 40px'],
+    m: [null, null, null, '0 auto', 'unset'],
     maxWidth: [null, null, null, 480, 'none'],
     h2: {
       fontWeight: 700,
@@ -134,16 +144,15 @@ const styles = {
     },
   },
   inputGroup: {
-    display:'flex',
-    flexWrap:'wrap',
-    justifyContent: 'center',
-    alignItems: 'flex-start',
-    alignContent: 'flex-start',
+    alignItems: 'center',
+    border: (theme) => `0px solid ${theme.colors.borderColor}`,
+    borderRadius: 5,
+    px: [3, null, null, 8],
     input: {
       border: 0,
       borderRadius: 0,
       fontSize: [1, null, null, 2],
-      minHeight: [40, null, null, 45 ],
+      minHeight: [40, null, null, 40],
       p: 0,
       ':focus': {
         boxShadow: 'none',

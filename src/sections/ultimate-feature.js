@@ -14,38 +14,42 @@ const data = [
   {
     id: 1,
     icon: icon1,
-    title: 'ultimate Email  subscription',
-    description: `Get your info tests delivered at home collect a sample from the your task.`,
+    title: 'Customisable Cacao',
+    description: `What we are special for - Customizable Cacao-  you can add images,change shape and
+     texture of the chocolates and will be on your doorstep, in the next 2 days!`,
   },
   {
     id: 2,
     icon: icon2,
-    title: 'Bolt Performance',
-    description: `Get your info tests delivered at home collect a sample from the your task.`,
+    title: 'Bundles for Almost any Occasion ',
+    description: `Recently launched tens of bundles to be used for almost any occasion`,
   },
   {
     id: 3,
     icon: icon3,
-    title: 'Secure Transaction',
-    description: `Get your info tests delivered at home collect a sample from the your task.`,
+    title: 'Only 4 Base Ingredients',
+    description: `We are also preferred because we only use 4 base ingredients sugar cane, 
+    cocoa bean, cocoa butter, and sunflower lecithin - to be suitable for everyone!`,
   },
   {
     id: 4,
     icon: icon4,
-    title: 'Multiple Options',
-    description: `Get your info tests delivered at home collect a sample from the your task.`,
+    title: 'Gluten free',
+    description: `Our chocolate is all gluten-free, so that everyone can enjoy it! `,
   },
   {
     id: 5,
     icon: icon5,
     title: '5 Star Rating service',
-    description: `Get your info tests delivered at home collect a sample from the your task.`,
+    description: `We have been rated a 5-star!`,
   },
   {
     id: 6,
     icon: icon6,
-    title: 'Integrated with Shopify',
-    description: `Get your info tests delivered at home collect a sample from the your task.`,
+    title: 'Organic Cocoa',
+    description: `Our cocoa comes from tropical evergreen Cocoa trees, such as Theobroma Cocoa, 
+    which grow in the wet lowland tropics of Central and South America, West Africa, and Southeast 
+    Asia`,
   },
 ];
 
@@ -81,13 +85,13 @@ const styles = {
     marginBottom: [50, 50, 80],
     p: {
       maxWidth: 490,
-      margin: ['10px auto 0'],
+      margin: ['5px auto 0'],
     },
   },
   features: {
     gap: [35, null, null, 40, '50px 30px', 60],
     display: ['grid', 'grid'],
-    maxWidth: 1030,
+    maxWidth: 1130,
     margin: '0 auto',
     gridTemplateColumns: [
       'repeat(1, 1fr)',
@@ -99,7 +103,7 @@ const styles = {
     '.feature-item': {
       display: ['block'],
       textAlign: 'center',
-      maxWidth: [290, 260, null, 280, 'none'],
+      maxWidth: [300, 290, null, 300, 'none'],
       m: ['0 auto', '0 auto', '0 auto', '0 auto', '0 auto', 0],
       figure: {
         m: ['0 0 20px'],
@@ -108,7 +112,7 @@ const styles = {
         mb: ['15px', '15px', '20px'],
       },
       p: {
-        fontSize: ['14px', '14px', '16px', '16px', '14px', '16px'],
+        fontSize: ['13px', '13px', '15px', '15px', '13px', '15px'],
       },
     },
   },

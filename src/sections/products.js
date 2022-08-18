@@ -16,39 +16,41 @@ const data = [
   {
     id: 1,
     image: gallery1,
-    title: 'Front working space',
+    title: 'Family Occasions',
   },
   {
     id: 2,
     image: gallery2,
-    title: 'Meeting corner',
+    title: 'Chocolate Flowers',
   },
   {
     id: 3,
     image: gallery3,
-    title: 'Guest meeting room',
+    title: 'Single Bars',
   },
   {
     id: 4,
     image: gallery4,
-    title: 'Guest rest room',
+    title: 'Hand Picked',
   },
   {
     id: 6,
     image: gallery6,
-    title: 'Kitchen room',
+    title: 'Personalized Picks',
   },
   {
     id: 5,
     image: gallery5,
-    title: 'Single working space',
+    title: 'Seasonal',
   },
 ];
 
 const masonryOptions = {
   transitionDuration: 0,
 };
-
+const handleClick=()=>{
+  window.open("https://vedantsinghal07.mfs.gg/oGFht3u")
+}
 const Gallery = () => {
   return (
     <Box id="gallery" as="section" sx={styles.section}>
@@ -63,8 +65,8 @@ const Gallery = () => {
             <GalleryCard key={item.id} item={item} />
           ))}
         </Box>
-        <Button variant="muted" sx={styles.button}>
-          Explore More <RiArrowRightSLine size="20px" />
+        <Button variant="muted" sx={styles.button} onClick={handleClick}>
+        Buy Now <RiArrowRightSLine size="20px" />
         </Button>
       </Container>
     </Box>

@@ -5,7 +5,7 @@ import Router from 'next/router';
 import { initGA, logPageView } from 'analytics';
 */
 import 'assets/css/react-slick.css';
-
+import 'theme/style.css'
 export default function CustomApp({ Component, pageProps }) {
   /** 
    useEffect(() => {

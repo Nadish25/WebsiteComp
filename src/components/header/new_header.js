@@ -1,10 +1,10 @@
 /** @jsx jsx */
-import { jsx, Box, Flex, Container, Button } from 'theme-ui';
+import { jsx, Box, Flex, Container, Button ,Image} from 'theme-ui';
 import { Fragment, useState } from 'react';
 import Sticky from 'react-stickynode';
 import Logo from 'components/logo';
 import TopBar from 'components/topbar';
-import LockIcon from 'components/icons/lock';
+import bag from 'assets/images/icons/bag.png';
 import HamburgerMenu from 'components/hamburger';
 import Navbar from './navbar';
 import { useRouter } from 'next/router'
@@ -22,7 +22,7 @@ export default function NewHeader() {
   };
   const handleClick = (e) => {
     e.preventDefault()
-    router.push("/about")
+    window.open("https://vedantsinghal07.mfs.gg/oGFht3u")
   }
   const toggleMobileMenu = () => {
     setState((prev) => {
@@ -60,14 +60,15 @@ export default function NewHeader() {
 
             <Flex sx={styles.buttonGroup}>
               <Button
+              onClick={handleClick}
                 variant="text"
                 sx={{
                   ...styles.login,
-                  color: state.isSticky ? 'text' : 'white',
+                  color: state.isSticky ? 'text' : 'black',
                 }}
               >
-                <LockIcon fill={state.isSticky ? '#343D48' : 'white'} />
-                Login
+           <Image src={bag} sx={styles.cartIcon}/>
+                Buy
               </Button>
 
             </Flex>
@@ -93,7 +94,7 @@ const styles = {
     py: 4,
     transition: 'all 0.3s ease-in-out 0s',
     '&.is-sticky': {
-      backgroundColor: '#c1934a',
+      backgroundColor: '#563a3a',
       boxShadow: '0 6px 13px rgba(38,78,118,0.1)',
       paddingTop: '15px',
       paddingBottom: '15px',
@@ -101,6 +102,9 @@ const styles = {
     '&.is-mobile-menu': {
       backgroundColor: 'white',
     },
+  },
+  cartIcon:{
+    width: "2rem",
   },
   container: {
     display: 'flex',

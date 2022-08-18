@@ -5,7 +5,7 @@ import Image from 'components/image';
 
 const Testimonial = ({ testimonial }) => {
   const isMobile = useMediaQuery({
-    query: '(max-width: 767px)',
+    query: '(max-width: 750px)',
   });
   return (
     <Box as="article" sx={styles.testimonial}>
@@ -34,7 +34,7 @@ const Testimonial = ({ testimonial }) => {
             {testimonial.text}
           </Box>
         )}
-        <Text as="p">
+        <Text as="p" sx={styles.author}>
           <strong>{testimonial.authorName},</strong> {testimonial.designation}
         </Text>
       </Box>
@@ -88,4 +88,7 @@ const styles = {
     letterSpacing: 'heading',
     textAlign: ['center', null, null, 'left'],
   },
+  author:{
+    mb:'0px'
+  }
 };
