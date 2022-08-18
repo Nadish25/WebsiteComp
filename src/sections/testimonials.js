@@ -24,7 +24,7 @@ const data = [
     avatar: test3,
     authorName: 'Richard',
     designation: 'Traveler',
-    text: `"I always buy a box for my wife, who adores the chocolates.I decided to surprise her with a Cacao chocolate box because I hadn't been there in
+    text: `"When ever I travel to Sweden, I always buy a box of chocolates for my wife, who adores it. I decided to surprise her with a Cacao chocolate box because I hadn't been there in
      a while. She felt the same way she did 10 years ago loved it."`,
   },
 ];
