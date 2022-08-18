@@ -72,7 +72,7 @@ export default function Header() {
                 variant="text"
                 sx={{
                   ...styles.login,
-                  color: state.isSticky ? 'text' : 'white',
+                  color: state.isSticky ? 'text' : 'black',
                 }}
               >
                 <Image src={shop} sx={styles.cartIcon}/>

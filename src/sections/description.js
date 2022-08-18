@@ -50,6 +50,17 @@ Digital Marketing - For an online store or digital business, the USP is often pr
 Search Marketing - Improving a website's SEO and ranking for key terms in search engines such as Google can be a good way for a company to generate visibility and communicate their USPs.
 Quality - Superior materials or ingredients, superior craftsmanship, proprietary manufacturing methods, one of a kind
 Price - The lowest price guaranteed, price matching, free shipping, bulk discounts, special offers</Text>
+
+
+<SectionHeading
+          sx={styles.heading}
+          title="Team"
+          description="Our Introductions"
+  />
+  <Text sx={styles.para2}>My name is <b>Shaurya Chandna</b>, and I am 14 years old. I am currently enrolled at Scottish High International School. I enjoy sports, video games, and playing the guitar.</Text>
+  <br/><Text sx={styles.para2}>I'm <b>Nadish Namish Bhardwaj</b>, I'm 13 years old and am studying at Scottish High International School. I like playing sports, coding, guitar, and astronomy.</Text>
+  <br/><Text sx={styles.para2}>I am <b>Rutva Rishi</b> and I am 14 years old who is studying in Scottish High International School. Love to play Sports such as Cricket, Football and Basketball</Text>
+  <br/><Text sx={styles.para2}>I am <b>Vedant Singhal</b>, amd I am 14 years old. I love front-end development, mathematics and playing tennis.</Text>
       </Container>
     </section>
   );
