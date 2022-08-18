@@ -57,8 +57,8 @@ const Gallery = () => {
       <Container sx={styles.container}>
         <SectionHeading
           sx={styles.heading}
-          slogan="Working space"
-          title="Let’s meet our interior room decoration"
+          slogan="Top Categories"
+          title="Meet our latest chocolates"
         />
         <Box as={Masonry} options={masonryOptions} sx={styles.galleryWrapper}>
           {data?.map((item) => (
